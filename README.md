@@ -1,11 +1,9 @@
-In this repository
 Underwater Event Camera Aided SLAM Dataset
+### Instructions
+[Software installation](Docs/installation.md) - Setup instructions for a BlueROV2, Event camera and the topside computer:
 
-Setup instructions for a BlueROV2, Event camera and the topside computer:
-[Software installation](Docs/installation.md)
+[Recorded Dataset](Docs/dataset.md) - Guide for using the recorded dataset:
 
-Guide for using the recorded dataset:
-[Recorded Dataset](Docs/dataset.md)
 
 
 ### Abstract

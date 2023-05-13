@@ -1,4 +1,4 @@
-Use the follwing instructions to preapare your BlueROV2 and laptop for data collection or dataset playback
+Use the following instructions to prepare your BlueROV2 and laptop for data collection or dataset playback
 
 ### Content
 - [BlueROV2 Setup](#bluerov2)

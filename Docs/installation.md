@@ -184,6 +184,10 @@ Source your installation
 source ~/uslam_ws/devel/setup.bash
 ```
 
+### Install ORB SLAM 3 
+The first SLAM software we were using.
+Follow these instructions for installing on Ubuntu 20.04 with ROS Noetic:
+[Orb SLAM 3]([https://github.com/OsloMet-OceanLab/underwater_event_dataset](https://github.com/discoimp/orb_u)
 
 ### Calibration software (if using your own equipment)
 Follow the instructions here to install the calibration software:

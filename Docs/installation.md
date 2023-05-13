@@ -1,4 +1,6 @@
-The following instruction is a summary of many repos, listed at the bottom.
+Use the follwing instructions to preapare your BlueROV2 for data collection
+
+After completing 
 
 # BlueROV2
 ### SD-Card setup on BlueROV2
@@ -14,9 +16,8 @@ sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv-keys 379CE19
 sudo apt update && sudo apt install balena-etcher-electron -y
 balena-etcher-electron
 ```
-
-Insert the SD-Card back into the ROV.
-Basic instructions for the BlueROV2 can be found at [Blue Robotics](https://docs.bluerobotics.com/ardusub-zola/software/onboard/BlueOS-1.1/getting-started/)
+Return the SD-Card to the Raspberry Pi and boot.
+Basic instructions for accessing the BlueOS interface can be found at [Blue Robotics](https://docs.bluerobotics.com/ardusub-zola/software/onboard/BlueOS-1.1/getting-started/)
 
 ### Setting up additional streams from BlueROV2
 Mavlink messages:
@@ -36,6 +37,11 @@ Find your stream, click configure and add
 port: 5601
 
 There are better ways to solve the video stream. Both the Raspberry Pi's CPU and network load increased unneccesary by the above solution. 
+
+### Adding Extensions
+Click the Extensions Manager and install the appropriate docker containers:
+Waterlinked DVL driver (integrates your DVL)
+VirtualHere (to enable forwarding the Raspberry Pi USB ports to the topside computer)
 
 # Top Side Computer
 ### Ubuntu 20.04 (Virtual Machine) (optional)

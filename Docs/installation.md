@@ -1,9 +1,28 @@
 Use the follwing instructions to preapare your BlueROV2 for data collection
 
-After completing 
+### Content
+- [BlueROV2](#bluerov2)
+  - [Flash SD Card with latest software](#Flash-SD-Card-with-latest-software)
+  - [Configure additional MAVLink stream](#Configure-additional-MAVLink-stream)
+  - [Activate Extensions](#Activate-Extensions)
+- [Top Side Computer](#top-side-computer)
+  - [Ubuntu 20.04 (Virtual Machine) (optional)](#ubuntu-2004-virtual-machine-optional)
+  - [From a fresh install of ubuntu 20.04.6](#from-a-fresh-install-of-ubuntu-20046)
+  - [Install basic tools](#install-basic-tools)
+  - [Increase Swap Drive (optional)](#increase-swap-drive-optional)
+  - [ROS Noetic](#ros-noetic)
+  - [Mavlink to ROS messages (MAVROS)](#mavlink-to-ros-mavros)
+  - [Event camera driver](#install-the-ros-enabled-event-camera-driver)
+  - [Ultimate SLAM](#install-ultimate-slam)
+  - [Kalibr Calibration Software](#calibration-software-if-using-your-own-equipment)
+  - [Add the convenience script to your terminal sessions](#add-the-convenience-script-to-bashrc)
+  - [(Install VirtualHere, USB over IP support)](#install-virtualhere-usb-over-ip-support)
+
+
+
 
 # BlueROV2
-### SD-Card setup on BlueROV2
+### Flash SD Card with latest software
 
 Download the latest [BlueOS image](https://github.com/bluerobotics/BlueOS-docker/releases)
 
@@ -19,7 +38,7 @@ balena-etcher-electron
 Return the SD-Card to the Raspberry Pi and boot.
 Basic instructions for accessing the BlueOS interface can be found at [Blue Robotics](https://docs.bluerobotics.com/ardusub-zola/software/onboard/BlueOS-1.1/getting-started/)
 
-### Setting up additional streams from BlueROV2
+### Configure additional MAVLink stream
 Mavlink messages:
 The MAVLink stream can only be read by one application. To process MAVLink messages while also using QGround Control, we need to configure a additional streams.
 
@@ -38,7 +57,7 @@ port: 5601
 
 There are better ways to solve the video stream. Both the Raspberry Pi's CPU and network load increased unneccesary by the above solution. 
 
-### Adding Extensions
+### Activate Extensions
 Click the Extensions Manager and install the appropriate docker containers:
 Waterlinked DVL driver (integrates your DVL)
 VirtualHere (to enable forwarding the Raspberry Pi USB ports to the topside computer)
@@ -66,7 +85,7 @@ Installing Ubuntu 20.04 with a default partition table allocates only 2Gb to the
 If you have less than 16Gb installed RAM on your computer follow this instruction to [increase your swap drive partition]( https://github.com/discoimp/ORB_SLAM3#02-create-a-new-swap-file-optional)
 
 
-### Install [ROS Noetic](http://wiki.ros.org/noetic/Installation/Debian)
+### [ROS Noetic](http://wiki.ros.org/noetic/Installation/Debian)
 Add the repository to your sources and install ROS:
 ```
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'

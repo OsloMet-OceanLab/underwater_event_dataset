@@ -17,7 +17,7 @@ Use the follwing instructions to preapare your BlueROV2 and laptop for data coll
   - [ORB SLAM 3](#Install-ORB-SLAM-3)
   - [Kalibr Calibration Software](#calibration-software-if-using-your-own-equipment) *
   - [Add the convenience script to your terminal sessions](#add-the-convenience-script-to-bashrc)
-  - [(Install VirtualHere, USB over IP support)](#install-virtualhere-usb-over-ip-support) *
+  - [USB over IP support](#install-virtualhere-usb-over-ip-support) *
 
 
 

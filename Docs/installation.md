@@ -1,11 +1,11 @@
 Use the follwing instructions to preapare your BlueROV2 for data collection
 
 ### Content
-- [BlueROV2](#bluerov2)
+- [BlueROV2 Setup](#bluerov2)
   - [Flash SD Card with latest software](#Flash-SD-Card-with-latest-software)
   - [Configure additional MAVLink stream](#Configure-additional-MAVLink-stream)
   - [Activate Extensions](#Activate-Extensions)
-- [Top Side Computer](#top-side-computer)
+- [Top Side Computer Setup](#top-side-computer)
   - [Ubuntu 20.04 (Virtual Machine) (optional)](#ubuntu-2004-virtual-machine-optional)
   - [From a fresh install of ubuntu 20.04.6](#from-a-fresh-install-of-ubuntu-20046)
   - [Install basic tools](#install-basic-tools)
@@ -107,7 +107,7 @@ source /opt/ros/noetic/setup.bash
 ```
 
 ### Mavlink to ROS (MAVROS)
-To run the scripts converting mavlink messages to ROS messages.
+This package is needed to convert the mavlink messages to ROS messages.
 
 Condensed version based on [mavros installation instructions](https://github.com/mavlink/mavros/blob/master/mavros/README.md#installation)
 

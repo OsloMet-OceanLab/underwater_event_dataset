@@ -4,7 +4,7 @@ Use the follwing instructions to preapare your BlueROV2 for data collection
 - [BlueROV2 Setup](#bluerov2)
   - [Flash SD Card with latest software](#Flash-SD-Card-with-latest-software)
   - [Configure additional MAVLink stream](#Configure-additional-MAVLink-stream)
-  - [Activate Extensions](#Activate-Extensions)
+  - [Activate Extensions for DVL and USB over IP](#Activate-Extensions)
 - [Top Side Computer Setup](#top-side-computer)
   - [Ubuntu 20.04 (Virtual Machine) (optional)](#ubuntu-2004-virtual-machine-optional)
   - [From a fresh install of ubuntu 20.04.6](#from-a-fresh-install-of-ubuntu-20046)

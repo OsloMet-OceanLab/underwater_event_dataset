@@ -1,23 +1,23 @@
-Use the follwing instructions to preapare your BlueROV2 for data collection
+Use the follwing instructions to preapare your BlueROV2 and laptop for data collection or dataset playback
 
 ### Content
 - [BlueROV2 Setup](#bluerov2)
-  - [Flash SD Card with latest software](#Flash-SD-Card-with-latest-software)
-  - [Configure additional MAVLink stream](#Configure-additional-MAVLink-stream)
-  - [Activate Extensions for DVL and USB over IP](#Activate-Extensions)
+  - [Flash SD Card with latest software](#Flash-SD-Card-with-latest-software) *
+  - [Configure additional MAVLink stream](#Configure-additional-MAVLink-stream) *
+  - [Activate Extensions for DVL and USB over IP](#Activate-Extensions) *
 - [Top Side Computer Setup](#top-side-computer)
   - [Ubuntu 20.04 (Virtual Machine) (optional)](#ubuntu-2004-virtual-machine-optional)
-  - [From a fresh install of ubuntu 20.04.6](#from-a-fresh-install-of-ubuntu-20046)
+  - [Update system](#from-a-fresh-install-of-ubuntu-20046)
   - [Install basic tools](#install-basic-tools)
   - [Increase Swap Drive (optional)](#increase-swap-drive-optional)
   - [ROS Noetic](#ros-noetic)
-  - [Mavlink to ROS messages (MAVROS)](#mavlink-to-ros-mavros)
-  - [Event camera driver](#install-the-ros-enabled-event-camera-driver)
+  - [Mavlink to ROS messages (MAVROS)](#mavlink-to-ros-mavros) *
+  - [Event camera driver](#install-the-ros-enabled-event-camera-driver) *
   - [Ultimate SLAM](#install-ultimate-slam)
   - [ORB SLAM 3](#Install-ORB-SLAM-3)
-  - [Kalibr Calibration Software](#calibration-software-if-using-your-own-equipment)
+  - [Kalibr Calibration Software](#calibration-software-if-using-your-own-equipment) *
   - [Add the convenience script to your terminal sessions](#add-the-convenience-script-to-bashrc)
-  - [(Install VirtualHere, USB over IP support)](#install-virtualhere-usb-over-ip-support)
+  - [(Install VirtualHere, USB over IP support)](#install-virtualhere-usb-over-ip-support) *
 
 
 

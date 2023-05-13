@@ -183,6 +183,8 @@ Source your installation
 ```
 source ~/uslam_ws/devel/setup.bash
 ```
+
+
 ### Calibration software (if using your own equipment)
 Follow the instructions here to install the calibration software:
 [Kalibr installation instructions](https://github.com/ethz-asl/kalibr/wiki/installation#:~:text=Install%20the%20build%20and%20run%20dependencies)
@@ -253,16 +255,20 @@ sudo update-alternatives --install /usr/local/bin/usbip usbip $(command -v ls /u
 sudo apt update && sudo apt install usbip
 ```
 
-The above instructions are partly built on the below forks:
-[](https://github.com/discoimp/rpg_ultimate_slam_open)
-[](https://github.com/discoimp/blue-rov2-noetic-interface)
-[](https://github.com/discoimp/rpg_dvs_ros)
-[](https://github.com/discoimp/BlueOS-UsbIp-manual)
-[](https://github.com/discoimp/mavros)
-[](https://github.com/discoimp/orb_u)
+The above instructions are condensed or copied from many things, including the below forks:
+[Install Ultimate SLAM](https://github.com/discoimp/rpg_ultimate_slam_open)
+[Development workspace](https://github.com/discoimp/blue-rov2-noetic-interface)
+[Event Camera Driver](https://github.com/discoimp/rpg_dvs_ros)
+[Mavros from source](https://github.com/discoimp/mavros)
+[Install Virtual Machine KVM](https://github.com/discoimp/QEmu_Focal_ROS)
+[ORB SLAM 3 installation instructions](https://github.com/discoimp/orb_u)
 
-[](https://github.com/discoimp/BlueOS-PlatformSwitch)
-[](https://github.com/discoimp/bluerov_ros_playground)
+[Blue Robotics](https://docs.bluerobotics.com/ardusub-zola/software/onboard/BlueOS-1.1/getting-started/)
+
+While finding our way many less fruitful paths were taken:
+[Install BlueOS on a ROS supported OS](https://github.com/discoimp/BlueOS-PlatformSwitch) - Branches :Ubuntu server and Debian 10
+[Build ROS Docker image for Raspberry Pi](https://github.com/bluerobotics/BlueOS-docker)
+[Manual USB/IP on Raspberry Pi](https://github.com/discoimp/BlueOS-UsbIp-manual)
 
 
 

@@ -151,12 +151,13 @@ If trouble finds you, follow this instruction by the book:
 To open a second feed from the DVL sent as ROS messages without writing your own code
 ```
 cd ~/catkin_ws/src
-# fixed a bug in publisher.py when using python3
+# fixed a bug in publisher.py when using python3 -> switched to fork
 git clone -b master https://github.com/discoimp/dvl-a50-ros-driver.git
-# added a line to update the shebang if system is running python 3.#
+# added a line to update the shebang if Python 3.
 if [[ $(python --version 2>&1) =~ "Python 3" ]]; then sed -i '' '1s/python$/python3/' dvl-a50-ros-driver/scripts/{publisher.py,subscriber.py,subscriber_gui.py}; fi
 cd ~/catkin_ws
-catkin build
+# dynamic build method
+[[ -d .catkin_tools ]] && catkin build || catkin_make
 ```
 
 ### Install the ROS-enabled Event camera [driver](https://github.com/discoimp/rpg_dvs_ros)

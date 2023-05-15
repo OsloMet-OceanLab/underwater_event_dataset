@@ -148,13 +148,17 @@ If trouble finds you, follow this instruction by the book:
 [mavros installation instructions](https://github.com/mavlink/mavros/blob/master/mavros/README.md#installation)
 
 ### DVL A50 ROS driver
-To open a second feed from the DVL sent as ROS messages without writing your own code
+To open a second feed from the DVL published as ROS messages do this:
 ```
 cd ~/catkin_ws/src
 # fixed a bug in publisher.py when using python3 -> switched to fork
 git clone -b master https://github.com/discoimp/dvl-a50-ros-driver.git
-# added a line to update the shebang if Python 3.
-if [[ $(python --version 2>&1) =~ "Python 3" ]]; then sed -i '' '1s/python$/python3/' dvl-a50-ros-driver/scripts/{publisher.py,subscriber.py,subscriber_gui.py}; fi
+cd ~/catkin_ws/src
+git clone -b master https://github.com/discoimp/dvl-a50-ros-driver.git
+# Changes some lines if you are using python3
+if [[ $(python --version 2>&1) =~ "Python 3" ]]; then sed -i '' '1s/python$/python3/' dvl-a50-ros-driver/scripts/{publisher.py,subscriber.py,subscriber_gui.py} && sed -i '0,/Tkinter/s//tkinter/' subscriber_gui.py; fi
+cd ~/catkin_ws
+[[ -d .catkin_tools ]] && catkin build || catkin_make
 cd ~/catkin_ws
 # dynamic build method
 [[ -d .catkin_tools ]] && catkin build || catkin_make

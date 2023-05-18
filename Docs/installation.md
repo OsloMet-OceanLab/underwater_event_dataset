@@ -19,7 +19,7 @@ Use the following instructions to prepare your BlueROV2 and laptop for data coll
 | ---[DVL-A50 ROS driver](#DVL-A50-ROS-Driver) | Publish the system ground truth as ROS messages |
 | ---[Ultimate SLAM](#install-ultimate-slam) | Run SLAM on event + frames + imu |
 | ---[ORB SLAM 3](#Install-ORB-SLAM-3) | Run SLAM on frames + imu |
-| ---[Kalibr Calibration Software](#calibration-software-if-using-your-own-equipment) | Obtain camera intrinsic parameters for SLAM on own camera |
+| ---[Kalibr Calibration Software](#calibration-software-if-using-your-own-equipment) | Obtain intrinsic parameters for SLAM on own camera |
 | ---[Add the convenience script to your terminal sessions](#add-the-convenience-script-to-bashrc) | Optional shell script to ease operations |
 
   

@@ -7,18 +7,19 @@ Use the following instructions to prepare your BlueROV2 and laptop for data coll
   - [Activate Extensions for DVL and USB over IP](#Activate-Extensions) *
 - [Top Side Computer Setup](#top-side-computer)
   - [Ubuntu 20.04 (Virtual Machine) (optional)](#ubuntu-2004-virtual-machine-optional)
-  - [Update system](#from-a-fresh-install-of-ubuntu-20046)
-  - [Install basic tools](#install-basic-tools)
+  - [Install basic tools](#Getting-started)
   - [Increase Swap Drive (optional)](#increase-swap-drive-optional)
   - [ROS Noetic](#ros-noetic)
   - [Mavlink to ROS messages (MAVROS)](#mavlink-to-ros-mavros) *
+  - [USB over IP support](#install-virtualhere-usb-over-ip-support) *
+  - [Event camera driver](#install-the-ros-enabled-event-camera-driver) *
   - [DVL-A50 ROS driver](#DVL-A50-ROS-Driver)
   - [Event camera driver](#install-the-ros-enabled-event-camera-driver) *
   - [Ultimate SLAM](#install-ultimate-slam)
   - [ORB SLAM 3](#Install-ORB-SLAM-3)
   - [Kalibr Calibration Software](#calibration-software-if-using-your-own-equipment) *
   - [Add the convenience script to your terminal sessions](#add-the-convenience-script-to-bashrc)
-  - [USB over IP support](#install-virtualhere-usb-over-ip-support) *
+  
 
 
 
@@ -71,13 +72,14 @@ Get started with the Kernel Based Virtual Machine here:
 [KVM/Qemu - Virtual Machine Starter](https://github.com/discoimp/QEmu_Focal_ROS)
 or install normally from ubuntu.com
 
-### From a fresh install of ubuntu 20.04.6
+### Getting started
+From fresh install of ubuntu 20.04.6
 Make sure your system is up to date and rebooted (if necessary)
 ``` 
 sudo apt update && sudo apt upgrade -y
 reboot
 ```
-### Install basic tools
+Install build tools
 ```
 sudo apt update && sudo apt install git curl liblapack-dev libblas-dev python3-catkin-tools python3-rosinstall-generator python3-osrf-pycommon python3-vcstool python3-wstool python3-rosdep -y
 ```
@@ -147,6 +149,49 @@ catkin build && source devel/setup.bash
 If trouble finds you, follow this instruction by the book:
 [mavros installation instructions](https://github.com/mavlink/mavros/blob/master/mavros/README.md#installation)
 
+### (Install VirtualHere, USB over IP support)
+(not needed for dataset playback)
+```
+sudo apt install -y build-essential libudev-dev libusb-1.0-0-dev
+sudo apt install linux-tools-virtual hwdata linux-tools-$(uname -r) linux-tools-generic libcanberra-gtk-module libcanberra-gtk3-module
+```
+This should do it. Test to see if you can connect and control the camera.
+If it fails try installing a kernel-specific version of usbip before setting sail for Google. The below line should get you started, but might not be sufficient.
+```
+sudo update-alternatives --install /usr/local/bin/usbip usbip $(command -v ls /usr/lib/linux-tools/*/usbip | tail -n1) 20
+sudo apt update && sudo apt install usbip
+```
+
+The above instructions are condensed or copied from many things, including the below forks:
+(Some of these are written in a sligthly more relaxed language)
+- [Install Ultimate SLAM](https://github.com/discoimp/rpg_ultimate_slam_open)
+- [Development workspace](https://github.com/discoimp/blue-rov2-noetic-interface)
+- [Event Camera Driver](https://github.com/discoimp/rpg_dvs_ros)
+- [Mavros from source](https://github.com/discoimp/mavros)
+- [Install Virtual Machine KVM](https://github.com/discoimp/QEmu_Focal_ROS)
+- [ORB SLAM 3 installation instructions](https://github.com/discoimp/orb_u)
+
+While finding our way many less fruitful paths were taken:
+- [Install BlueOS on a ROS supported OS](https://github.com/discoimp/BlueOS-PlatformSwitch) - Branches :Ubuntu server and Debian 10
+- [Build ROS Docker image for Raspberry Pi](https://github.com/bluerobotics/BlueOS-docker)
+- [Manual USB/IP on Raspberry Pi](https://github.com/discoimp/BlueOS-UsbIp-manual)
+
+### Install the ROS-enabled Event camera [driver](https://github.com/discoimp/rpg_dvs_ros)
+```
+# Downloads convenient install scripts
+curl -o /tmp/install_event_driver.sh -LO https://raw.githubusercontent.com/discoimp/rpg_dvs_ros/master/install_event_driver.sh && curl -o /tmp/check_prerequisites.sh -LO https://raw.githubusercontent.com/discoimp/rpg_dvs_ros/master/check_prerequisites.sh && chmod +x /tmp/install_event_driver.sh /tmp/check_prerequisites.sh
+```
+
+Checks and asks to install missing dependencies
+```
+sudo -E /tmp/check_prerequisites.sh
+```
+
+Create, build and source your workspace
+```
+/tmp/install_event_driver.sh
+```
+
 ### DVL A50 ROS driver
 To open a second feed from the DVL published as ROS messages do this:
 ```
@@ -164,21 +209,6 @@ cd ~/catkin_ws
 [[ -d .catkin_tools ]] && catkin build || catkin_make
 ```
 
-### Install the ROS-enabled Event camera [driver](https://github.com/discoimp/rpg_dvs_ros)
-```
-# Downloads convenient install scripts
-curl -o /tmp/install_event_driver.sh -LO https://raw.githubusercontent.com/discoimp/rpg_dvs_ros/master/install_event_driver.sh && curl -o /tmp/check_prerequisites.sh -LO https://raw.githubusercontent.com/discoimp/rpg_dvs_ros/master/check_prerequisites.sh && chmod +x /tmp/install_event_driver.sh /tmp/check_prerequisites.sh
-```
-
-Checks and asks to install missing dependencies
-```
-sudo -E /tmp/check_prerequisites.sh
-```
-
-Create, build and source your workspace
-```
-/tmp/install_event_driver.sh
-```
 
 
 ### Install [Ultimate SLAM](https://github.com/discoimp/rpg_ultimate_slam_open/blob/main/docs/Installation-of-UltimateSLAM.md)
@@ -263,32 +293,7 @@ To install add it to your start-up file. (Uninstall by commenting the same line)
 ```
 echo 'source ~/catkin_ws/src/blue-rov2-noetic-interface/resources/status.sh' >> ~/.bashrc
 ```
-### (Install VirtualHere, USB over IP support)
-(not needed for dataset playback)
-```
-sudo apt install -y build-essential libudev-dev libusb-1.0-0-dev
-sudo apt install linux-tools-virtual hwdata linux-tools-$(uname -r) linux-tools-generic libcanberra-gtk-module libcanberra-gtk3-module
-```
-This should do it. Test to see if you can connect and control the camera.
-If it fails try installing a kernel-specific version of usbip before setting sail for Google. The below line should get you started, but might not be sufficient.
-```
-sudo update-alternatives --install /usr/local/bin/usbip usbip $(command -v ls /usr/lib/linux-tools/*/usbip | tail -n1) 20
-sudo apt update && sudo apt install usbip
-```
 
-The above instructions are condensed or copied from many things, including the below forks:
-(Some of these are written in a sligthly more relaxed language)
-- [Install Ultimate SLAM](https://github.com/discoimp/rpg_ultimate_slam_open)
-- [Development workspace](https://github.com/discoimp/blue-rov2-noetic-interface)
-- [Event Camera Driver](https://github.com/discoimp/rpg_dvs_ros)
-- [Mavros from source](https://github.com/discoimp/mavros)
-- [Install Virtual Machine KVM](https://github.com/discoimp/QEmu_Focal_ROS)
-- [ORB SLAM 3 installation instructions](https://github.com/discoimp/orb_u)
-
-While finding our way many less fruitful paths were taken:
-- [Install BlueOS on a ROS supported OS](https://github.com/discoimp/BlueOS-PlatformSwitch) - Branches :Ubuntu server and Debian 10
-- [Build ROS Docker image for Raspberry Pi](https://github.com/bluerobotics/BlueOS-docker)
-- [Manual USB/IP on Raspberry Pi](https://github.com/discoimp/BlueOS-UsbIp-manual)
 
 
 

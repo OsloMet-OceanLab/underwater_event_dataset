@@ -4,11 +4,11 @@ Use the following instructions to prepare your BlueROV2 and laptop for data coll
 
 | Section | Description |
 | :--- | :--- |
-| [BlueROV2 Setup](#bluerov2) | Configurations on the ROV |
+| [BlueROV2 Setup](#bluerov2) | - |
 | ---[Flash SD Card with latest software](#Flash-SD-Card-with-latest-software) | Update the ROV's companion pc to run BlueOS |
 | ---[Configure additional MAVLink stream](#Configure-additional-MAVLink-stream) | Open auxilliary port to enable reading MAVLink messages |
 | ---[Activate Extensions for DVL and USB over IP](#Activate-Extensions) | Forward USB and integrate DVL with Pixhawk |
-| [Top Side Computer Setup](#top-side-computer) | Configurations on the top side laptop |
+| [Top Side Computer Setup](#top-side-computer) | - |
 | ---[Ubuntu 20.04 (Virtual Machine) (optional)](#ubuntu-2004-virtual-machine-optional) | Getting started with a KVM (virtual machine) |
 | ---[Install basic tools](#Getting-started) | Enable building open source packages |
 | ---[Increase Swap Drive (optional)](#increase-swap-drive-optional) | Increase available system memory by allocating from hdd |

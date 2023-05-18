@@ -2,25 +2,25 @@ Use the following instructions to prepare your BlueROV2 and laptop for data coll
 
 ### Content
 
-| Section | Explanation |
+| Section | Description |
 | :--- | :--- |
 | [BlueROV2 Setup](#bluerov2) | Configurations on the ROV |
 | ---[Flash SD Card with latest software](#Flash-SD-Card-with-latest-software) | Update the ROV's companion pc to run BlueOS |
 | ---[Configure additional MAVLink stream](#Configure-additional-MAVLink-stream) | Open auxilliary port to enable reading MAVLink messages |
-| ---[Activate Extensions for DVL and USB over IP](#Activate-Extensions) | Enable ROV services through GUI |
+| ---[Activate Extensions for DVL and USB over IP](#Activate-Extensions) | Forward USB and integrate DVL with Pixhawk |
 | [Top Side Computer Setup](#top-side-computer) | Configurations on the top side laptop |
 | ---[Ubuntu 20.04 (Virtual Machine) (optional)](#ubuntu-2004-virtual-machine-optional) | Getting started with a KVM (virtual machine) |
-| ---[Install basic tools](#Getting-started) | Add general tools to enable building open source packages |
-| ---[Increase Swap Drive (optional)](#increase-swap-drive-optional) | guide to increase available system memory |
-| ---[ROS Noetic](#ros-noetic) | Install ROS Noetic |
-| ---[Mavlink to ROS messages (MAVROS)](#mavlink-to-ros-mavros) | Package needed to work with ROV telemetry data |
-| ---[USB over IP support](#install-virtualhere-usb-over-ip-support) | Connect to the forwarded USB port |
+| ---[Install basic tools](#Getting-started) | Enable building open source packages |
+| ---[Increase Swap Drive (optional)](#increase-swap-drive-optional) | Increase available system memory by allocating from hdd |
+| ---[ROS Noetic](#ros-noetic) | Enable working with rosbags and ROS messages |
+| ---[Mavlink to ROS messages (MAVROS)](#mavlink-to-ros-mavros) | Read and process ROV telemetry data |
+| ---[USB over IP support](#install-virtualhere-usb-over-ip-support) | Connect to a virtual USB port |
 | ---[Event camera driver](#install-the-ros-enabled-event-camera-driver) | Publish event camera data as ROS messages |
 | ---[DVL-A50 ROS driver](#DVL-A50-ROS-Driver) | Publish the system ground truth as ROS messages |
-| ---[Ultimate SLAM](#install-ultimate-slam) | Install SLAM software |
-| ---[ORB SLAM 3](#Install-ORB-SLAM-3) | Install alternative SLAM software |
-| ---[Kalibr Calibration Software](#calibration-software-if-using-your-own-equipment) | Software to calibrate your own camrera |
-| ---[Add the convenience script to your terminal sessions](#add-the-convenience-script-to-bashrc) | optional shell script to ease operations |
+| ---[Ultimate SLAM](#install-ultimate-slam) | Run SLAM on event + frames + imu |
+| ---[ORB SLAM 3](#Install-ORB-SLAM-3) | Run SLAM on frames + imu |
+| ---[Kalibr Calibration Software](#calibration-software-if-using-your-own-equipment) | Obtain camera intrinsic parameters for SLAM on own camera |
+| ---[Add the convenience script to your terminal sessions](#add-the-convenience-script-to-bashrc) | Optional shell script to ease operations |
 
   
 

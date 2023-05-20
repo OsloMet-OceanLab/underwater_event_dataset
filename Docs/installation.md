@@ -6,7 +6,7 @@ Use the following instructions to prepare your BlueROV2 and laptop for data coll
 | :--- | :--- |
 | [BlueROV2 Setup](#bluerov2) | - |
 | ---[Flash SD Card with latest software](#Flash-SD-Card-with-latest-software) | Update the ROV's companion pc to run BlueOS |
-| ---[Configure additional MAVLink stream](#Configure-additional-MAVLink-stream) | Open auxilliary port to enable reading MAVLink messages |
+| ---[Configure additional streams](#Configure-additional-streams) | Open auxilliary ports to enable reading Video and MAVLink messages topside |
 | ---[Activate Extensions for DVL and USB over IP](#Activate-Extensions) | Forward USB and integrate DVL with Pixhawk |
 | [Top Side Computer Setup](#top-side-computer) | - |
 | ---[Ubuntu 20.04 (Virtual Machine) (optional)](#ubuntu-2004-virtual-machine-optional) | Getting started with a KVM (virtual machine) |
@@ -44,7 +44,7 @@ balena-etcher-electron
 Return the SD-Card to the Raspberry Pi and boot.
 Basic instructions for accessing the BlueOS interface can be found at [Blue Robotics](https://docs.bluerobotics.com/ardusub-zola/software/onboard/BlueOS-1.1/getting-started/)
 
-### Configure additional MAVLink stream
+### Configure additional streams
 Mavlink messages:
 The MAVLink stream can only be read by one application. To process MAVLink messages while also using QGround Control, we need to configure a additional streams.
 

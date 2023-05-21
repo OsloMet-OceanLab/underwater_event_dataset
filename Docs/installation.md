@@ -20,7 +20,7 @@ Use the following instructions to prepare your BlueROV2 and laptop for data coll
 | ---[Ultimate SLAM](#install-ultimate-slam) | Run SLAM on event + frames + imu |
 | ---[ORB SLAM 3](#Install-ORB-SLAM-3) | Run SLAM on frames + imu |
 | ---[Kalibr Calibration Software](#calibration-software-if-using-your-own-equipment) | Obtain intrinsic parameters for SLAM on own camera |
-| ---[Add the convenience script to your terminal sessions](#add-the-convenience-script-to-bashrc) | Optional shell script to ease operations |
+| ---[Download resources](#Download) | App links and optional shell script to ease operations |
 
   
 
@@ -256,8 +256,8 @@ catkin build -DCMAKE_BUILD_TYPE=Release -j4
 ```
 Follow instructions from [Kalibr](https://github.com/ethz-asl/kalibr/wiki) on how to generate the calibration files.
 
-## Other resources
-We have created some scripts to keep track of things
+## Download
+We have created some scripts to keep track of things and provided links to relevant software below.
 
 Download scripts, QGroundControl and the VirtualHere (USB/IP) client
 

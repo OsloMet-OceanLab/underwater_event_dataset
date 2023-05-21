@@ -88,7 +88,7 @@ sudo apt update && sudo apt install git curl liblapack-dev libblas-dev python3-c
 ```
 ### Increase Swap Drive (optional)
 Some packages craves a fair amount of installed RAM to build error free.
-Installing Ubuntu 20.04 with a default partition table allocates only 2Gb to the the Swap Drive.
+Installing Ubuntu 20.04 with a default partition table allocates only 2Gb of virtual memory.
 If you have less than 16Gb installed RAM on your computer follow this instruction to [increase your swap drive partition]( https://github.com/discoimp/ORB_SLAM3#02-create-a-new-swap-file-optional)
 
 

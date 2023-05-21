@@ -167,19 +167,6 @@ sudo update-alternatives --install /usr/local/bin/usbip usbip $(command -v ls /u
 sudo apt update && sudo apt install usbip
 ```
 
-The above instructions are condensed or copied from many things, including the below forks:
-(Some of these are written in a sligthly more relaxed language)
-- [Install Ultimate SLAM](https://github.com/discoimp/rpg_ultimate_slam_open)
-- [Development workspace](https://github.com/discoimp/blue-rov2-noetic-interface)
-- [Event Camera Driver](https://github.com/discoimp/rpg_dvs_ros)
-- [Mavros from source](https://github.com/discoimp/mavros)
-- [Install Virtual Machine KVM](https://github.com/discoimp/QEmu_Focal_ROS)
-- [ORB SLAM 3 installation instructions](https://github.com/discoimp/orb_u)
-
-While finding our way many less fruitful paths were taken:
-- [Install BlueOS on a ROS supported OS](https://github.com/discoimp/BlueOS-PlatformSwitch) - Branches :Ubuntu server and Debian 10
-- [Build ROS Docker image for Raspberry Pi](https://github.com/bluerobotics/BlueOS-docker)
-- [Manual USB/IP on Raspberry Pi](https://github.com/discoimp/BlueOS-UsbIp-manual)
 
 ### Install the ROS-enabled Event camera [driver](https://github.com/discoimp/rpg_dvs_ros)
 ```
@@ -299,6 +286,19 @@ To install add it to your start-up file. (Uninstall by commenting the same line)
 echo 'source ~/catkin_ws/src/blue-rov2-noetic-interface/resources/status.sh' >> ~/.bashrc
 ```
 
+### Other attempts
+The above instructions are condensed or copied from many things, including the below forks:
+(Some of these are written in a sligthly more relaxed language)
+- [Install Ultimate SLAM](https://github.com/discoimp/rpg_ultimate_slam_open)
+- [Development workspace](https://github.com/discoimp/blue-rov2-noetic-interface)
+- [Event Camera Driver](https://github.com/discoimp/rpg_dvs_ros)
+- [Mavros from source](https://github.com/discoimp/mavros)
+- [Install Virtual Machine KVM](https://github.com/discoimp/QEmu_Focal_ROS)
+- [ORB SLAM 3 installation instructions](https://github.com/discoimp/orb_u)
 
+While finding our way many less fruitful paths were taken:
+- [Install BlueOS on a ROS supported OS](https://github.com/discoimp/BlueOS-PlatformSwitch) - Branches :Ubuntu server and Debian 10
+- [Build ROS Docker image for Raspberry Pi](https://github.com/bluerobotics/BlueOS-docker)
+- [Manual USB/IP on Raspberry Pi](https://github.com/discoimp/BlueOS-UsbIp-manual)
 
 

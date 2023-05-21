@@ -24,7 +24,10 @@ Use the following instructions to prepare your BlueROV2 and laptop for data coll
 
   
 
-
+### Disclaimer
+We didn't create these instructions in a vacuum.
+They are aggregated from a vast selection of existing sources. Some contains only minimal changes from the original while others are complete rewrites containing tips found on various forums not cited.
+For a complete changelist from original instructions, simply compare the forks using GitHubs own tools.
 
 
 # BlueROV2
@@ -107,7 +110,6 @@ Then just run it again
 ```
 sudo apt update && sudo apt install ros-noetic-desktop-full -y
 ```
-
 Source your installation
 ```
 source /opt/ros/noetic/setup.bash

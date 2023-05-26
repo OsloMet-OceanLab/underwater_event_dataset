@@ -10,7 +10,7 @@ with open('README.md', 'r') as f:
     readme = f.readlines()
 
 # Insert the table at a specific location in the README file (e.g., line 10)
-readme[10:10] = table
+readme[6:6] = table
 
 # Write the modified README back to file
 with open('README.md', 'w') as f:

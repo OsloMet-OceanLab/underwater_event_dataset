@@ -28,7 +28,7 @@ end = readme.index('| ---[Download resources](#Download) | App links and optiona
 del readme[start:end]
 
 # Insert the new table at a specific location in the README file (e.g., line 10)
-readme[10:10] = new_table
+readme[6:6] = new_table
 
 # Write the modified README back to file
 with open('README.md', 'w') as f:

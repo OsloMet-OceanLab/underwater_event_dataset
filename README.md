@@ -1,5 +1,6 @@
 <img src="Docs/Poster.png" alt="Header of Academic Poster" title="Poster" width="1920" />
-Underwater Event Camera SLAM Dataset Collecting
+
+
 ### Instructions
 [Software installation](Docs/installation.md) - Setup instructions for a BlueROV2, Event camera and the topside computer:
 

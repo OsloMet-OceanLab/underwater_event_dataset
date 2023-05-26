@@ -27,7 +27,7 @@ Use the following instructions to prepare your BlueROV2 and laptop for data coll
 ### Disclaimer
 We didn't create these instructions in a vacuum.
 They are aggregated from a vast selection of existing sources. Some contains only minimal changes from the original while others are complete rewrites containing tips found on various forums not cited.
-For a complete changelist from original instructions, simply compare the forks using GitHubs own tools.
+For a complete changelist from original instructions, simply compare the forks using GitHub's own tools.
 
 
 # BlueROV2

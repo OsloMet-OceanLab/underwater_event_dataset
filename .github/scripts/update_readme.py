@@ -10,13 +10,16 @@ table = lines[start:end]
 # Convert the relative links in the table to absolute links using base_url
 new_table = []
 for line in table:
-    left, right = line.split('](')
-    right = right.rstrip(')\n')
-    if right.startswith('#'):
-        new_line = left + '](' + base_url + right + ')\n'
+    if '](' in line:
+        left, right = line.split('](')
+        right = right.rstrip(')\n')
+        if right.startswith('#'):
+            new_line = left + '](' + base_url + right + ')\n'
+        else:
+            new_line = line
+        new_table.append(new_line)
     else:
-        new_line = line
-    new_table.append(new_line)
+        new_table.append(line)  # keep the line as is if it does not contain a link
 
 # Read the README file
 with open('README.md', 'r') as f:
@@ -28,7 +31,7 @@ end = readme.index('| ---[Download resources](#Download) | App links and optiona
 del readme[start:end]
 
 # Insert the new table at a specific location in the README file (e.g., line 10)
-readme[6:6] = new_table
+readme[10:10] = new_table
 
 # Write the modified README back to file
 with open('README.md', 'w') as f:

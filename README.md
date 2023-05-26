@@ -28,7 +28,6 @@ Get access to our dataset along with instructions on how to replicate our setup 
 | ---[ORB SLAM 3](https://github.com/OsloMet-OceanLab/underwater_event_dataset/blob/main/Docs/installation.md#Install-ORB-SLAM-3) | Run SLAM on frames + imu |)
 | ---[Kalibr Calibration Software](https://github.com/OsloMet-OceanLab/underwater_event_dataset/blob/main/Docs/installation.md#calibration-software-if-using-your-own-equipment) | Obtain intrinsic parameters for SLAM on own camera |)
 | ---[Download resources](https://github.com/OsloMet-OceanLab/underwater_event_dataset/blob/main/Docs/installation.md#Download) | App links and optional shell script to ease operations |)
-### Abstract
-Paste abstract from final report here:
+
 
 

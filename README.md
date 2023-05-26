@@ -1,4 +1,4 @@
-<img src="Docs/Poster.png" alt="2777_top_bar" title="Pirate Mode" width="2149" height="1018" />
+<img src="Docs/Poster.png" alt="Header of Academic Poster" title="Poster" width="1920" />
 Underwater Event Camera SLAM Dataset Collecting
 ### Instructions
 [Software installation](Docs/installation.md) - Setup instructions for a BlueROV2, Event camera and the topside computer:

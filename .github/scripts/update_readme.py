@@ -9,9 +9,17 @@ table = lines[start:end]
 with open('README.md', 'r') as f:
     readme = f.readlines()
 
-# Insert the table at a specific location in the README file (e.g., line 10)
-readme[6:6] = table
+# Find the start and end of the old table in README
+try:
+    readme_start = readme.index('### Content\n')
+    readme_end = readme.index('| ---[Download resources](#Download) | App links and optional shell script to ease operations |\n') + 1
+except ValueError:
+    readme_start = readme_end = 10  # Default location if the old table is not found
+
+# Replace the old table with the new table
+readme[readme_start:readme_end] = table
 
 # Write the modified README back to file
 with open('README.md', 'w') as f:
     f.writelines(readme)
+

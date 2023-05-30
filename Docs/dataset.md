@@ -1,5 +1,6 @@
 - [Download](https://www.kaggle.com/datasets/jhenkla/event-dataset-for-underwater-slam) dataset hosted at Kaggle
 Dataset containing event sensor-data, camera data, IMU-data, depth-sensor data, and DVL as ground truth data for validation.
+Each subfolder contains information about the recorded ROStopics for the bag-file, and individual sensor update-frequency. 
 
 If you use this dataset in an academic context, please cite the following work:
 

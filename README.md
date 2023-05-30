@@ -3,7 +3,7 @@
 We aim to increase the access to this high-tech field, fueling advancements in underwater navigation.
 Get access to our dataset along with instructions on how to replicate our setup and feel free to contribute.
 
-[Recorded Dataset](Docs/dataset.md) - Guide for using the recorded dataset:
+[Recorded Dataset](Docs/dataset.md) - Guide for using the recorded dataset (under construction):
 
 
 [Software installation](Docs/installation.md) - Contains the below sections:

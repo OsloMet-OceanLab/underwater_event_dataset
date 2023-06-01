@@ -21,7 +21,7 @@ Use the following instructions to prepare your BlueROV2 and laptop for data coll
 | ---[ORB SLAM 3](#Install-ORB-SLAM-3) | Run SLAM on frames + imu |
 | ---[Kalibr Calibration Software](#calibration-software-if-using-your-own-equipment) | Obtain intrinsic parameters for SLAM on own camera |
 | ---[Download resources](#Download) | App links and optional shell script to ease operations |
-
+| ---[References](#References) | References to include for academic work |
   
 
 ### Disclaimer
@@ -302,3 +302,75 @@ While finding our way many less fruitful paths were taken:
 - [Manual USB/IP on Raspberry Pi](https://github.com/discoimp/BlueOS-UsbIp-manual)
 
 
+### References
+[DVS ROS Driver](https://github.com/uzh-rpg/rpg_dvs_ros#publications):
+E. Mueggler, B. Huber, D. Scaramuzza: Event-based, 6-DOF Pose Tracking for High-Speed Maneuvers. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Chicago, 2014. (PDF)
+P. Lichtsteiner, C. Posch, T. Delbruck: A 128×128 120dB 15us Latency Asynchronous Temporal Contrast Vision Sensor. IEEE Journal of Solid State Circuits, Feb. 2008, 43(2), pp. 566-576. (PDF)
+C. Brandli, R. Berner, M. Yang, S. C. Liu and T. Delbruck: A 240 × 180 130 dB 3 us Latency Global Shutter Spatiotemporal Vision Sensor. IEEE Journal of Solid-State Circuits, Oct. 2014, 49(10), pp. 2333-2341. (Link)
+
+[Ultimate SLAM](https://github.com/uzh-rpg/rpg_ultimate_slam_open#ultimate-slam):
+@InProceedings{Rosinol_2018_RAL,
+  author = {Antoni Rosinol Vidal and Henri Rebecq and Timo Horstschaefer and Davide Scaramuzza},
+  title = {Ultimate SLAM? Combining Events, Images, and IMU for Robust Visual SLAM in HDR and High Speed Scenarios},
+  booktitle = {{IEEE} Robotics and Automation Letters (RA-L)},
+  year = {2018}
+}
+@InProceedings{Rebecq_2017_BMVC,
+  author = {Henri Rebecq and Timo Horstschaefer and Davide Scaramuzza},
+  title = {Real-time Visual-Inertial Odometry for Event Cameras using Keyframe-based Nonlinear Optimization},
+  booktitle = {British Machine Vision Conference (BMVC)},
+  year = {2017}
+}
+
+[ORB SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3#1-license)
+@article{ORBSLAM3_TRO,
+  title={{ORB-SLAM3}: An Accurate Open-Source Library for Visual, Visual-Inertial 
+           and Multi-Map {SLAM}},
+  author={Campos, Carlos AND Elvira, Richard AND G\´omez, Juan J. AND Montiel, 
+          Jos\'e M. M. AND Tard\'os, Juan D.},
+  journal={IEEE Transactions on Robotics}, 
+  volume={37},
+  number={6},
+  pages={1874-1890},
+  year={2021}
+ }
+ [Kalibr](https://github.com/ethz-asl/kalibr/wiki/installation#references)
+ @inproceedings{oth2013rolling,
+  title={Rolling Shutter Camera Calibration},
+  author={Oth, L and Furgale, P and Kneip, L and Siegwart, R},
+  booktitle={Proc. of the IEEE Computer Vision and Pattern Recognition (CVPR)},
+  year={2013}
+}
+
+@inproceedings{maye2013self,
+  title={Self-supervised Calibration for Robotic Systems},
+  author={Maye, J and Furgale, P and Siegwart, R},
+  booktitle={Proc. of the IEEE Intelligent Vehicles Symposium (IVS)},
+  year={2013}
+}
+
+@inproceedings{furgale2012continuous,
+  title={Continuous-Time Batch Estimation Using Temporal Basis Functions},
+  author={Furgale, P and Barfoot, TD and Sibley, G},
+  booktitle={Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={2088--2095},
+  location={St. Paul, MN},
+  year={2012}
+}
+
+@inproceedings{furgale2013unified,
+  title={Unified Temporal and Spatial Calibration for Multi-Sensor Systems},
+  author={Furgale, P and Rehder, J and Siegwart, R},
+  booktitle={Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  location={Tokyo, Japan},
+  year={2013}
+}
+
+@inproceedings{rehder2016extending,
+  title={Extending kalibr: Calibrating the extrinsics of multiple IMUs and of individual axes},
+  author={Rehder, J and Nikolic, J and Schneider, T and Hinzmann, T and Siegwart, R},
+  booktitle={Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={4304--4311},
+  location={Stockholm, Sweden},
+  year={2016}
+}

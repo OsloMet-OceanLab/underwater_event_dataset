@@ -303,12 +303,41 @@ While finding our way many less fruitful paths were taken:
 
 
 ### References
-[DVS ROS Driver](https://github.com/uzh-rpg/rpg_dvs_ros#publications):
-E. Mueggler, B. Huber, D. Scaramuzza: Event-based, 6-DOF Pose Tracking for High-Speed Maneuvers. IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Chicago, 2014. (PDF)
-P. Lichtsteiner, C. Posch, T. Delbruck: A 128×128 120dB 15us Latency Asynchronous Temporal Contrast Vision Sensor. IEEE Journal of Solid State Circuits, Feb. 2008, 43(2), pp. 566-576. (PDF)
-C. Brandli, R. Berner, M. Yang, S. C. Liu and T. Delbruck: A 240 × 180 130 dB 3 us Latency Global Shutter Spatiotemporal Vision Sensor. IEEE Journal of Solid-State Circuits, Oct. 2014, 49(10), pp. 2333-2341. (Link)
 
-[Ultimate SLAM](https://github.com/uzh-rpg/rpg_ultimate_slam_open#ultimate-slam):
+**[DVS ROS Driver](https://github.com/uzh-rpg/rpg_dvs_ros#publications):**
+
+@inproceedings{mueggler2014event,
+  title={Event-based, 6-DOF Pose Tracking for High-Speed Maneuvers},
+  author={Mueggler, E and Huber, B and Scaramuzza, D},
+  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  location={Chicago},
+  year={2014}
+}
+
+@article{lichtsteiner2008a,
+  title={A 128×128 120dB 15us Latency Asynchronous Temporal Contrast Vision Sensor},
+  author={Lichtsteiner, P and Posch, C and Delbruck, T},
+  journal={IEEE Journal of Solid State Circuits},
+  volume={43},
+  number={2},
+  pages={566--576},
+  year={2008},
+  month={Feb}
+}
+
+@article{brandli2014a,
+  title={A 240 × 180 130 dB 3 us Latency Global Shutter Spatiotemporal Vision Sensor},
+  author={Brandli, C and Berner, R and Yang, M and Liu, SC and Delbruck, T},
+  journal={IEEE Journal of Solid-State Circuits},
+  volume={49},
+  number={10},
+  pages={2333--2341},
+  year={2014},
+  month={Oct}
+}
+
+**[Ultimate SLAM](https://github.com/uzh-rpg/rpg_ultimate_slam_open#ultimate-slam):**
+
 @InProceedings{Rosinol_2018_RAL,
   author = {Antoni Rosinol Vidal and Henri Rebecq and Timo Horstschaefer and Davide Scaramuzza},
   title = {Ultimate SLAM? Combining Events, Images, and IMU for Robust Visual SLAM in HDR and High Speed Scenarios},
@@ -321,8 +350,8 @@ C. Brandli, R. Berner, M. Yang, S. C. Liu and T. Delbruck: A 240 × 180 130 dB 3
   booktitle = {British Machine Vision Conference (BMVC)},
   year = {2017}
 }
+**[ORB SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3#1-license):**
 
-[ORB SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3#1-license)
 @article{ORBSLAM3_TRO,
   title={{ORB-SLAM3}: An Accurate Open-Source Library for Visual, Visual-Inertial 
            and Multi-Map {SLAM}},
@@ -334,7 +363,9 @@ C. Brandli, R. Berner, M. Yang, S. C. Liu and T. Delbruck: A 240 × 180 130 dB 3
   pages={1874-1890},
   year={2021}
  }
- [Kalibr](https://github.com/ethz-asl/kalibr/wiki/installation#references)
+ 
+ **[Kalibr](https://github.com/ethz-asl/kalibr/wiki/installation#references):**
+ 
  @inproceedings{oth2013rolling,
   title={Rolling Shutter Camera Calibration},
   author={Oth, L and Furgale, P and Kneip, L and Siegwart, R},

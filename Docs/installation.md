@@ -303,6 +303,7 @@ While finding our way many less fruitful paths were taken:
 
 
 ### References
+If you are using one of the below packages in an academic work, please cite them:
 
 **[DVS ROS Driver](https://github.com/uzh-rpg/rpg_dvs_ros#publications):**
 

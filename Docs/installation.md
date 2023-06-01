@@ -350,6 +350,7 @@ While finding our way many less fruitful paths were taken:
   booktitle = {British Machine Vision Conference (BMVC)},
   year = {2017}
 }
+
 **[ORB SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3#1-license):**
 
 @article{ORBSLAM3_TRO,
